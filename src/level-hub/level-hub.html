@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="level.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Orc Dungeon</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <header>
+                <h3>Choose a level:</h3>
+            </header>
+
+            <a class="btn btn-primary" role="button" href="../main.html" onclick="saveLevel(1)">Level 1</a>
+            <a class="btn btn-primary" role="button" href="../main.html" onclick="saveLevel(2)">Level 2</a>
+
+            <a class="btn btn-primary" role="button" href="../../index.html" style="margin-top: 30px;">
+                Back to Menu
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function saveLevel(level) {
+            localStorage["maze.level"] = level;
+        }
+    </script>
+</body>
+</html>

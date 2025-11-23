@@ -1,0 +1,82 @@
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050505 !important;
+    color: #e6e6e6;
+    font-family: "Times New Roman", serif;
+    overflow: hidden;
+}
+
+/* контейнер bootstrap не двигаем абсолютами */
+.container-fluid {
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+    padding: 0;
+}
+
+/* окно как в старой RPG */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 60px;
+
+    background: #0b0b0b;
+    border: 3px solid #2a2a2a;
+    box-shadow: 0 0 0 3px #000 inset;
+
+    width: min(700px, 90vw);
+}
+
+/* заголовок */
+h3 {
+    margin: 0 0 25px 0;
+    font-size: clamp(2rem, 5vw, 3.2rem) !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #c9c16a; /* старое золото */
+    text-shadow: 2px 2px 0 #000;
+}
+
+header { margin-bottom: 10px !important; }
+
+/* кнопки уровней */
+a.btn {
+    font-size: clamp(1.2rem, 3vw, 2rem) !important;
+    width: min(320px, 70vw);
+    margin-top: 18px !important;
+
+    color: #111 !important;
+    background: #6b6b6b !important;
+    border: 2px solid #3a3a3a !important;
+    border-radius: 0 !important;          /* “старый” стиль */
+    box-shadow: 0 0 0 2px #000 inset;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ховер как "опасность/орк" */
+a.btn:hover {
+    background: #7a2b2b !important;
+    color: #fff !important;
+    border-color: #a33 !important;
+}

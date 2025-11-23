@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>Orc Dungeon</title>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Orc Dungeon</h1>
+            <p class="subtitle">Enter the dungeon. Grab the gold. Beware the orcs.</p>
+        </header>
+
+        <section class="name-input">
+            <form id="nickname-form" action="./src/level-hub/level-hub.html" method="get" autocomplete="off">
+                <div class="input_group">
+                    <input
+                        type="text"
+                        id="nickname-input"
+                        name="nickname"
+                        class="input_group_input"
+                        required
+                        minlength="2"
+                        maxlength="16"
+                    />
+                    <label for="nickname-input" class="input_group_label">
+                        Enter your nickname
+                    </label>
+                </div>
+
+                <button type="submit" class="enter-btn">Enter the dungeon</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        // Save nickname on submit
+        const form = document.getElementById("nickname-form");
+        const input = document.getElementById("nickname-input");
+
+        form.addEventListener("submit", () => {
+            localStorage["maze.lastPlayer"] = input.value.trim();
+        });
+    </script>
+</body>
+</html>
